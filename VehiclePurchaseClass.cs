@@ -93,7 +93,7 @@ namespace BudgetApp
 
         public virtual string ToDisplay()
         {
-            string message = "Total monthly Payments for the car is R" + CalculateTotalMonthlyCost().ToString("C");
+            string message = "Total monthly Payments for the car is" + CalculateTotalMonthlyCost().ToString("C");
             return message;
         }
     }

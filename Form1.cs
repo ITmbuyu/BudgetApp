@@ -32,7 +32,18 @@ namespace BudgetApp
         public static double MounthlyIncome=0;
         public static double Accomadation=0;
         public static double Vechile=0;
-        
+        // method to check if entry are numbers
+        public static bool IsOnlyDigits(string inputString)
+        {
+            bool isValid = true;
+
+            foreach (char c in inputString)
+            {
+                if (!Char.IsDigit(c))
+                    isValid = false;
+            }
+            return isValid;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,15 +55,44 @@ namespace BudgetApp
             double rentalamount = 0;
             string Accomendation = " ";
 
+
+            
+            if (IsOnlyDigits(textBox1.Text)==false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double GMI = Convert.ToDouble(textBox1.Text);
+            if (IsOnlyDigits(textBox2.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double EMT = Convert.ToDouble(textBox2.Text);
             MounthlyIncome = GMI;
 
-
+            if (IsOnlyDigits(textBox3.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double Egroceries = Convert.ToDouble(textBox3.Text);
+            if (IsOnlyDigits(textBox4.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double Ewaterandlights = Convert.ToDouble(textBox4.Text);
+            if (IsOnlyDigits(textBox5.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double Etravelcosts = Convert.ToDouble(textBox5.Text);
+            if (IsOnlyDigits(textBox6.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double Ecellphone = Convert.ToDouble(textBox6.Text);
+            if (IsOnlyDigits(textBox7.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             double Eotherexpenses = Convert.ToDouble(textBox7.Text);
 
             
@@ -63,6 +103,10 @@ namespace BudgetApp
             if (comboBox1.SelectedIndex == 0)
             {
                 Accomendation = "Renting Accommodation";
+                if (IsOnlyDigits(textBox8.Text) == false)
+                {
+                    MessageBox.Show(" Please Enter Valid amount in Input");
+                }
                 rentalamount = Convert.ToDouble(textBox8.Text);
                 ExpensesClass expensesClass = new ExpensesClass(GMI,EMT,Egroceries,Ewaterandlights,Etravelcosts,Ecellphone,Eotherexpenses,Accomendation,rentalamount);
                 richTextBox1.Text = expensesClass.ToDisplay();
@@ -73,7 +117,15 @@ namespace BudgetApp
             else if (comboBox1.SelectedIndex == 1)
             {
                 Accomendation = "Buying A Property";
+                if (IsOnlyDigits(textBox9.Text) == false)
+                {
+                    MessageBox.Show(" Please Enter Valid amount in Input");
+                }
                 Purchurseprice = Convert.ToDouble(textBox9.Text);
+                if (IsOnlyDigits(textBox10.Text) == false)
+                {
+                    MessageBox.Show(" Please Enter Valid amount in Input");
+                }
                 Totaldeposit = Convert.ToDouble(textBox10.Text);
                 IntrestRate = Convert.ToDouble(numericUpDown1.Value / 100);
                 numberofmonths = Convert.ToInt32(numericUpDown2.Value);
@@ -252,15 +304,31 @@ namespace BudgetApp
             double PurchasePrice; double TotalDeposit; double VIntrestRate; double InsurancePremium; int numMonths;
             double Totale;
 
+            if (IsOnlyDigits(textBox11.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             PurchasePrice = double.Parse(textBox11.Text);
-            ModelandMake = textBox12.Text;
+            if (IsOnlyDigits(textBox12.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
+            ModelandMake = textBox13.Text;
+            if (IsOnlyDigits(textBox1.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             TotalDeposit = double.Parse(textBox13.Text);
+            if (IsOnlyDigits(textBox14.Text) == false)
+            {
+                MessageBox.Show(" Please Enter Valid amount in Input");
+            }
             InsurancePremium = double.Parse(textBox14.Text);
             VIntrestRate = Convert.ToDouble(numericUpDown5.Value / 100);
             numMonths = Convert.ToInt32(numericUpDown3.Value);
 
             VehiclePurchaseClass vehiclePurchaseClass = new VehiclePurchaseClass(PurchasePrice,TotalDeposit,VIntrestRate,InsurancePremium,ModelandMake,numMonths);
-            richTextBox2.Text = vehiclePurchaseClass.ToDisplay();
+            richTextBox2.Text = vehiclePurchaseClass.ToDisplay() + Environment.NewLine;
             E= E + vehiclePurchaseClass.CalculateTotalMonthlyCost();
             if (E> (MounthlyIncome/0.75))
             {
@@ -273,8 +341,12 @@ namespace BudgetApp
                                         Convert.ToDouble(textBox5.Text), Convert.ToDouble(textBox6.Text),
                                         Convert.ToDouble(textBox7.Text),Accomadation,Vechile};
             quickSort(Expenses, ExpensesAmount, 0, n - 1);
-            
-            richTextBox2.Text = printParallelArray(Expenses, ExpensesAmount, n);
+
+            foreach (string s in Expenses)
+            {
+                richTextBox2.Text += printParallelArray(Expenses, ExpensesAmount, n) + Environment.NewLine;
+            }
+            //richTextBox2.Text = printParallelArray(Expenses, ExpensesAmount, n);
 
         }
     }
