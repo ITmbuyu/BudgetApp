@@ -65,9 +65,29 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +96,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,7 +170,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(12, 204);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 394);
+            this.panel2.Size = new System.Drawing.Size(490, 365);
             this.panel2.TabIndex = 1;
             // 
             // textBox7
@@ -415,7 +439,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(37, 105);
+            this.button1.Location = new System.Drawing.Point(12, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -425,14 +449,33 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.richTextBox2);
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.richTextBox1);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Location = new System.Drawing.Point(522, 365);
+            this.panel6.Location = new System.Drawing.Point(1065, 12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(534, 217);
+            this.panel6.Size = new System.Drawing.Size(325, 557);
             this.panel6.TabIndex = 5;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(12, 280);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(265, 248);
+            this.richTextBox2.TabIndex = 23;
+            this.richTextBox2.Text = "";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 157);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "clear entry";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label18
             // 
@@ -445,33 +488,224 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(175, 79);
+            this.richTextBox1.Location = new System.Drawing.Point(93, 83);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(324, 118);
+            this.richTextBox1.Size = new System.Drawing.Size(184, 118);
             this.richTextBox1.TabIndex = 21;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // button2
+            // panel7
             // 
-            this.button2.Location = new System.Drawing.Point(37, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "clear entry";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.radioButton2);
+            this.panel7.Controls.Add(this.radioButton1);
+            this.panel7.Controls.Add(this.label20);
+            this.panel7.Controls.Add(this.label19);
+            this.panel7.Location = new System.Drawing.Point(522, 358);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(537, 211);
+            this.panel7.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.textBox14);
+            this.panel8.Controls.Add(this.textBox13);
+            this.panel8.Controls.Add(this.textBox12);
+            this.panel8.Controls.Add(this.label26);
+            this.panel8.Controls.Add(this.label25);
+            this.panel8.Controls.Add(this.numericUpDown5);
+            this.panel8.Controls.Add(this.label24);
+            this.panel8.Controls.Add(this.numericUpDown3);
+            this.panel8.Controls.Add(this.label21);
+            this.panel8.Controls.Add(this.textBox11);
+            this.panel8.Controls.Add(this.label22);
+            this.panel8.Controls.Add(this.label23);
+            this.panel8.Enabled = false;
+            this.panel8.Location = new System.Drawing.Point(3, 46);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(531, 165);
+            this.panel8.TabIndex = 9;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(273, 98);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(165, 15);
+            this.label26.TabIndex = 32;
+            this.label26.Text = "Estimated insurance premium";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(273, 58);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(75, 15);
+            this.label25.TabIndex = 30;
+            this.label25.Text = "Total Deposit";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(187, 56);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(66, 23);
+            this.numericUpDown5.TabIndex = 29;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(7, 58);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(139, 15);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Interest rate (percentage)";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Enabled = false;
+            this.numericUpDown3.Location = new System.Drawing.Point(187, 96);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(66, 23);
+            this.numericUpDown3.TabIndex = 27;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(5, 104);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(155, 15);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Number of months to repay";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(111, 16);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 23);
+            this.textBox11.TabIndex = 25;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(8, 22);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(84, 15);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "Purchase Price";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(273, 15);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(96, 15);
+            this.label23.TabIndex = 22;
+            this.label23.Text = "Model and Make";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(325, 26);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(41, 19);
+            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(258, 26);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(42, 19);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Yes";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(34, 26);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(159, 15);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Would You Like To Buy A Car";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(241, 1);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 15);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Vehicle";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(396, 11);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 23);
+            this.textBox12.TabIndex = 14;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(388, 55);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 23);
+            this.textBox13.TabIndex = 35;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(444, 95);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(78, 23);
+            this.textBox14.TabIndex = 36;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(207, 125);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 37;
+            this.button3.Text = "total monthly cost";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 610);
+            this.ClientSize = new System.Drawing.Size(1411, 597);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -486,6 +720,12 @@
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,5 +772,25 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button button3;
     }
 }
